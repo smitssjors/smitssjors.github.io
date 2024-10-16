@@ -1,6 +1,9 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.3.4"
+gem "csv"
+gem "base64"
+gem "faraday-retry"
 
 group :jekyll_plugins do
   gem "jekyll-default-layout"
