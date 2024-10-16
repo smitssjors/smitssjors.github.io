@@ -4,4 +4,4 @@
 
 ### Hello World
 
-{{ site.description }}
+{{ site.description }} {{ site.url }} {{ site.baseurl }}
