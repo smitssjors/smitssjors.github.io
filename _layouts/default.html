@@ -11,9 +11,10 @@
 <body class="prose prose-neutral mx-auto bg-white px-4 antialiased dark:prose-invert md:px-0 dark:bg-neutral-900">
   <header class="mb-10 mt-24 flex items-center">
     <strong class="text-lg tracking-widest">{{ site.title }}</strong>
-    <nav class="ml-auto flex gap-x-3">
-      <a href="/">About</a>
-      <a href="/posts">Posts</a>
+    <div class="ml-auto">/</div>
+    <nav class="ml-3 flex gap-x-3">
+      <a {% if page.url!="/" %}class="no-underline" {% endif %} href="/">About</a>
+      <a {% if page.url!="/posts.html" %}class="no-underline" {% endif %} href="/posts">Posts</a>
     </nav>
   </header>
   <main>
