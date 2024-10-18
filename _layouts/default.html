@@ -15,8 +15,9 @@
     </strong>
     <div class="ml-auto pb-[0.1875rem]">/</div>
     <nav class="ml-3 flex gap-x-3">
-      <a {% if page.url!="/" %}class="no-underline" {% endif %}href="/">About</a>
-      <a {% if page.url!="/posts.html" %}class="no-underline" {% endif %}href="/posts">Posts</a>
+      <a {% if page.url=="/" %}aria-current="page" {% else %}class="no-underline" {% endif %}href="/">About</a>
+      <a {% if page.url=="/posts.html" %}aria-current="page" {% else %}class="no-underline" {% endif
+        %}href="/posts">Posts</a>
     </nav>
   </header>
   <main>
