@@ -1,5 +1,6 @@
 ---
-title: about
+nav: true
+title: About
 ---
 
 # Hi, I'm Sjors...
