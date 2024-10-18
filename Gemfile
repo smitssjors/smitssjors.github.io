@@ -10,6 +10,8 @@ gem "tailwindcss-ruby"
 group :jekyll_plugins do
   gem "jekyll-default-layout"
   gem "jekyll-github-metadata"
+  gem "jekyll-optional-front-matter"
+  gem "jekyll-titles-from-headings"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,15 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  <title>{{ page.title }}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <title>{{ page.title | capitalize }} - {{ site.title }}</title>
 </head>
 
-<body>
-  {{ content}}
+<body class="prose prose-neutral mx-auto bg-white px-4 antialiased dark:prose-invert md:px-0 dark:bg-neutral-900">
+  <header class="mb-10 mt-24 flex items-center">
+    <strong class="text-lg tracking-widest">{{ site.title }}</strong>
+    <nav class="ml-auto flex gap-x-3">
+      <a href="/">About</a>
+      <a href="/posts">Posts</a>
+    </nav>
+  </header>
+  <main>
+    <article class="text-justify">
+      {{ content }}
+    </article>
+  </main>
+  <footer></footer>
 </body>
 
 </html>
