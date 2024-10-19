@@ -10,8 +10,11 @@ gem "tailwindcss-ruby"
 group :jekyll_plugins do
   gem "jekyll-commonmark"
   gem "jekyll-default-layout"
+  gem "jekyll-feed"
   gem "jekyll-github-metadata"
   gem "jekyll-optional-front-matter"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
   gem "jekyll-titles-from-headings"
 end
 
