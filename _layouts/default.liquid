@@ -25,7 +25,7 @@
             {% else -%}
               class="no-underline"
             {% endif -%}
-            href="{{ item.url }}"
+            href="{{ item.url | remove: ".html" }}"
           >
             {{ item.title }}
           </a>
@@ -37,6 +37,6 @@
         {{ content }}
       </article>
     </main>
-    <footer></footer>
+    <footer class="flex"></footer>
   </body>
 </html>
