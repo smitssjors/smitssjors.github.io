@@ -12,7 +12,7 @@
       {{ site.title }}
     </title>
   </head>
-  <body class="prose prose-neutral mx-auto bg-white px-4 antialiased dark:prose-invert md:px-0 dark:bg-neutral-900">
+  <body class="prose prose-neutral dark:prose-invert mx-auto flex min-h-screen flex-col bg-white px-4 antialiased md:px-0 dark:bg-neutral-900">
     <header class="mb-8 mt-24 flex items-center">
       <strong class="text-lg tracking-widest">
         <a href="/" class="not-prose">{{ site.title }}</a>
@@ -34,11 +34,16 @@
         {%- endfor %}
       </nav>
     </header>
-    <main>
+    <main class="flex-grow">
       <article class="sm:text-justify">
         {{ content }}
       </article>
     </main>
-    <footer class="flex"></footer>
+    <footer class="flex justify-center my-12">
+      <small>
+        © {{ site.time | date: '%Y' }}
+        {{ site.title -}}
+      </small>
+    </footer>
   </body>
 </html>
