@@ -3,7 +3,7 @@ nav: true
 title: About
 ---
 
-{% avatar {{ site.github.owner_name }} size=300 %}
+{% avatar {{ site.github.owner_name }} size=480 %}
 
 # Hi, I'm Sjors...
 
