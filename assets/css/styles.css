@@ -7,6 +7,6 @@
 
 @layer components {
     .avatar {
-        @apply rounded-lg;
+        @apply rounded-lg w-40 h-40;
     }
 }
