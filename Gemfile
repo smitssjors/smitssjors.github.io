@@ -8,7 +8,6 @@ gem "jekyll", "~> 4.3.4"
 gem "tailwindcss-ruby"
 
 group :jekyll_plugins do
-  gem "jekyll-avatar"
   gem "jekyll-commonmark"
   gem "jekyll-default-layout"
   gem "jekyll-feed"

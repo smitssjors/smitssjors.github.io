@@ -3,7 +3,8 @@ nav: true
 title: About
 ---
 
-{% avatar {{ site.github.owner_name }} size=160 %}
+<img class="rounded-lg" alt={{ site.title }} src={{
+site.github.owner_gravatar_url }} width=160 height=160/>
 
 # Hi, I'm Sjors...
 

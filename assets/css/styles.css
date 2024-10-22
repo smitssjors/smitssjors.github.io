@@ -4,9 +4,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer components {
-    .avatar {
-        @apply rounded-lg w-40 h-40;
-    }
-}
