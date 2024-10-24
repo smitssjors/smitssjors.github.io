@@ -42,53 +42,29 @@ allowing this for any request can be dangerous. Therefore it is important to
 have Caddy ask your application whether it should try to get a certificate for a
 certain domain.
 
-Let's see how this might work. First we will need an application.
+The following Caddyfile shows an example config. The global `on_demand_tls.ask`
+option tells Caddy to send a request like
+`http://localhost:5555/check?domain=example.com` in order to validate the
+domain. Then the `tls.on_demand` option enable On-Demand TLS for that particular
+site.
 
-```javascript
-Deno.serve((req) => return new Response("Hello"))
+```caddyfile
+{
+    on_demand_tls {
+        ask      http://localhost:5555/check
+    }
+}
+
+https:// {
+    tls {
+        on_demand
+    }
+    reverse_proxy localhost:9000
+}
 ```
 
-```javascript
-const defaultTheme = require("tailwindcss/defaultTheme");
+For more info check the Caddy docs:
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./_layouts/**/*.liquid",
-    "./_posts/**/*.{html,md}",
-    "./*.{html,md}",
-  ],
-  safelist: [{ pattern: /hljs.+/ }, "highlight"],
-  theme: {
-    extend: {
-      fontFamily: {
-        "sans": ['"InterVariable"', ...defaultTheme.fontFamily.sans],
-      },
-    },
-  },
-  plugins: [require("@tailwindcss/typography")],
-};
-```
-
-```dockerfile
-FROM python:3.12
-WORKDIR /usr/local/app
-
-# Install the application dependencies
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy in the source code
-COPY src ./src
-EXPOSE 5000
-
-# Setup an app user so the container doesn't run as the root user
-RUN useradd app
-USER app
-
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]
-```
-
-{% highlight javascript %}
-Deno.serve((req) => return new Response("Hello"))
-{% endhighlight %}
+- [https://caddyserver.com/docs/automatic-https#on-demand-tls](https://caddyserver.com/docs/automatic-https#on-demand-tls)
+- [https://caddyserver.com/docs/caddyfile/options#on-demand-tls](https://caddyserver.com/docs/caddyfile/options#on-demand-tls)
+- [https://caddy.community/t/serving-tens-of-thousands-of-domains-over-https-with-caddy/11179](https://caddy.community/t/serving-tens-of-thousands-of-domains-over-https-with-caddy/11179)
