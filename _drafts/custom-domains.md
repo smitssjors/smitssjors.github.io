@@ -48,7 +48,28 @@ Let's see how this might work. First we will need an application.
 Deno.serve((req) => return new Response("Hello"))
 ```
 
-{% highlight ruby %}
-def main
-end
+```javascript
+const defaultTheme = require("tailwindcss/defaultTheme");
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./_layouts/**/*.liquid",
+    "./_posts/**/*.{html,md}",
+    "./*.{html,md}",
+  ],
+  safelist: [{ pattern: /hljs.+/ }, "highlight"],
+  theme: {
+    extend: {
+      fontFamily: {
+        "sans": ['"InterVariable"', ...defaultTheme.fontFamily.sans],
+      },
+    },
+  },
+  plugins: [require("@tailwindcss/typography")],
+};
+```
+
+{% highlight javascript %}
+Deno.serve((req) => return new Response("Hello"))
 {% endhighlight %}
