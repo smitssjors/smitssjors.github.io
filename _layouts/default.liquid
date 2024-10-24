@@ -3,17 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="preload" as="image" href="{{ site.github.owner_gravatar_url }}">
+    {% seo -%}
+    {% feed_meta %}
     <title>
       {{ page.title }}
       •
       {{ site.title }}
     </title>
-    {% seo -%}
-    {% feed_meta %}
+    <script type="module" src="/assets/js/main.js"></script>
+    <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body class="prose prose-neutral dark:prose-invert mx-auto flex min-h-screen flex-col bg-white px-4 antialiased md:px-0 dark:bg-neutral-900">
     <header class="mb-8 mt-24 flex items-center">

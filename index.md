@@ -3,8 +3,8 @@ nav: true
 title: About
 ---
 
-<img class="rounded-lg" alt={{ site.title }} src={{
-site.github.owner_gravatar_url }} width=160 height=160/>
+<img class="rounded-lg" alt={{ site.title }} src="/assets/images/smitssjors.jpg"
+width=160 height=160/>
 
 # Hi, I'm Sjors...
 

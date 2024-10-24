@@ -2,11 +2,16 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./_layouts/**/*.liquid", "./*.{html,md}"],
+  content: [
+    "./_layouts/**/*.liquid",
+    "./_posts/**/*.{html,md}",
+    "./*.{html,md}",
+  ],
+  safelist: [{ pattern: /hljs.+/ }],
   theme: {
     extend: {
       fontFamily: {
-        "sans": ['"Inter"', ...defaultTheme.fontFamily.sans],
+        "sans": ['"InterVariable"', ...defaultTheme.fontFamily.sans],
       },
     },
   },
