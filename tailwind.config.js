@@ -7,7 +7,7 @@ module.exports = {
     "./_posts/**/*.{html,md}",
     "./*.{html,md}",
   ],
-  safelist: [{ pattern: /hljs.+/ }],
+  safelist: ["highlight"],
   theme: {
     extend: {
       fontFamily: {

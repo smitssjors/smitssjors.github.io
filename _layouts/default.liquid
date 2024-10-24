@@ -3,14 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% seo -%}
-    {% feed_meta %}
     <title>
       {{ page.title }}
       •
       {{ site.title }}
     </title>
-    <script type="module" src="/assets/js/main.js"></script>
+    {% seo -%}
+    {% feed_meta -%}
     <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body class="prose prose-neutral dark:prose-invert mx-auto flex min-h-screen flex-col bg-white px-4 antialiased md:px-0 dark:bg-neutral-900">

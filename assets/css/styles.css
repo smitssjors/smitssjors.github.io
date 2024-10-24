@@ -24,94 +24,40 @@
 }
 
 @layer components {
-    .hljs {
-        @apply text-[#c9d1d9];
-    }
+    .highlight {
 
-    .hljs-doctag,
-    .hljs-keyword,
-    .hljs-meta .hljs-keyword,
-    .hljs-template-tag,
-    .hljs-template-variable,
-    .hljs-type,
-    .hljs-variable.language_ {
-        @apply text-[#ff7b72];
-    }
+        .nc {
+            @apply text-[#ffa657];
+        }
 
-    .hljs-title,
-    .hljs-title.class_,
-    .hljs-title.class_.inherited__,
-    .hljs-title.function_ {
-        @apply text-[#d2a8ff];
-    }
+        .nx,
+        .p {
+            @apply text-[#f0f6fc];
+        }
 
-    .hljs-attr,
-    .hljs-attribute,
-    .hljs-literal,
-    .hljs-meta,
-    .hljs-number,
-    .hljs-operator,
-    .hljs-variable,
-    .hljs-selector-attr,
-    .hljs-selector-class,
-    .hljs-selector-id {
-        @apply text-[#79c0ff];
-    }
+        .nf {
+            @apply text-[#d2a8ff];
+        }
 
-    .hljs-regexp,
-    .hljs-string,
-    .hljs-meta .hljs-string {
-        @apply text-[#a5d6ff];
-    }
+        .o,
+        .na {
+            @apply text-[#79c0ff];
+        }
 
-    .hljs-built_in,
-    .hljs-symbol {
-        @apply text-[#ffa657];
-    }
+        .dl,
+        .s1,
+        .s2,
+        .sr {
+            @apply text-[#a5d6ff];
+        }
 
-    .hljs-comment,
-    .hljs-code,
-    .hljs-formula {
-        @apply text-[#8b949e];
-    }
+        .k,
+        .kd {
+            @apply text-[#ff7b72];
+        }
 
-    .hljs-name,
-    .hljs-quote,
-    .hljs-selector-tag,
-    .hljs-selector-pseudo {
-        @apply text-[#7ee787];
-    }
-
-    .hljs-subst {
-        @apply text-[#c9d1d9];
-    }
-
-    .hljs-section {
-        @apply text-[#1f6feb];
-        @apply font-bold;
-    }
-
-    .hljs-bullet {
-        @apply text-[#f2cc60];
-    }
-
-    .hljs-emphasis {
-        @apply text-[#c9d1d9];
-        @apply italic;
-    }
-
-    .hljs-strong {
-        @apply text-[#c9d1d9];
-        @apply font-bold;
-    }
-
-    .hljs-addition {
-        @apply text-[#aff5b4];
-        @apply bg-[#033a16];
-    }
-
-    .hljs-deletion {
-        @apply text-[#ffdcd7];
-        @apply bg-[#67060c];
+        .cm {
+            @apply text-[#9198a1];
+        }
     }
 }

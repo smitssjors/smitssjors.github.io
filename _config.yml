@@ -1,8 +1,6 @@
 optional_front_matter:
   remove_originals: true
 
-markdown: CommonMark
-
 exclude:
   - README.md
   - tailwind.config.js
