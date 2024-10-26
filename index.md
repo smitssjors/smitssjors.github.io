@@ -3,8 +3,8 @@ nav: true
 title: About
 ---
 
-<img class="rounded-lg" alt={{ site.title }} src="/assets/images/smitssjors.jpg"
-width=160 height=160/>
+![{{ site.title }}](/assets/images/smitssjors.jpg){: .rounded-lg width="160"
+height="160"}
 
 # Hi, I'm Sjors...
 
