@@ -3,4 +3,3 @@ optional_front_matter:
 
 exclude:
   - README.md
-  - tailwind.config.js

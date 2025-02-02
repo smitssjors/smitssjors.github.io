@@ -4,7 +4,7 @@ gem "csv"
 gem "base64"
 gem "faraday-retry"
 
-gem "jekyll", "~> 4.3.4"
+gem "jekyll", "~> 4.4.1"
 gem "tailwindcss-ruby"
 
 group :jekyll_plugins do
